@@ -1,0 +1,108 @@
+payment_id,failure_category,amount,baseline_action,gemini_action,gemini_confidence,gemini_reason,actual_outcome,recovered_amount
+pay_SYN_0437,CUSTOMER_ACTION_REQUIRED,25000,CUSTOMER_ACTION,CUSTOMER_ACTION,0.95,Failure category indicates customer action is required for netbanking payment.,recovered,25000
+pay_SYN_0900,TEMPORARY_FAILURE,5000000,HUMAN_REVIEW,HUMAN_REVIEW,0.9,High transaction amount of 5000000 paise combined with a high recent failure rate of 0.71 requires manual intervention.,not_recovered,0
+pay_SYN_0347,TEMPORARY_FAILURE,10000,CONTROLLED_RETRY,RETRY_LATER,0.85,"Temporary failure on first attempt, but customer history is poor and recent failure rate is elevated.",not_recovered,0
+pay_SYN_0061,BANK_TIMEOUT,250000,HUMAN_REVIEW,RETRY_LATER,0.85,"Bank timeout occurred on attempt 3 with poor customer history, suggesting a delayed retry is safest.",not_recovered,0
+pay_SYN_0868,CUSTOMER_ACTION_REQUIRED,500000,CUSTOMER_ACTION,CUSTOMER_ACTION,0.95,The failure category explicitly indicates customer action is required to resolve the issue.,not_recovered,0
+pay_SYN_0433,TEMPORARY_FAILURE,25000,CONTROLLED_RETRY,CONTROLLED_RETRY,0.9,Temporary failure on attempt 2 with moderate recent failure rate supports a controlled retry.,not_recovered,0
+pay_SYN_0522,BANK_TIMEOUT,25000,HUMAN_REVIEW,RETRY_LATER,0.85,Bank timeout on payment attempt 3 suggests a temporary issuer disruption. Retry later to allow bank recovery.,recovered,25000
+pay_SYN_0738,TEMPORARY_FAILURE,25000,CONTROLLED_RETRY,CONTROLLED_RETRY,0.9,Temporary failure on netbanking attempt 2 with low recent failure rate.,recovered,25000
+pay_SYN_0741,BANK_TIMEOUT,100000,RETRY_LATER,RETRY_LATER,0.85,Bank timeout on netbanking attempt 2 with high recent failure rate of 0.55 and poor customer history.,not_recovered,0
+pay_SYN_0661,UNKNOWN,25000,HUMAN_REVIEW,RETRY_LATER,0.85,Failure category is UNKNOWN and recent failure rate is high at 0.61 on attempt 2.,not_recovered,0
+pay_SYN_0412,BANK_TIMEOUT,5000000,HUMAN_REVIEW,RETRY_LATER,0.85,Initial netbanking attempt failed due to bank timeout during a period of high recent failure rate.,recovered,5000000
+pay_SYN_0679,CUSTOMER_ACTION_REQUIRED,500000,HUMAN_REVIEW,CUSTOMER_ACTION,0.95,Failure category is CUSTOMER_ACTION_REQUIRED on attempt 3 with poor customer history.,not_recovered,0
+pay_SYN_0627,UNKNOWN,50000,HUMAN_REVIEW,RETRY_LATER,0.85,High recent failure rate of 0.7 with unknown failure category on attempt 3 indicates potential system issues.,not_recovered,0
+pay_SYN_0514,TEMPORARY_FAILURE,500000,HUMAN_REVIEW,CUSTOMER_ACTION,0.85,"Third attempt failed with temporary failure and customer history is poor, requiring customer intervention.",not_recovered,0
+pay_SYN_0860,PERMANENT_FAILURE,5000000,HUMAN_REVIEW,DO_NOT_RETRY,0.95,Permanent failure category encountered on attempt 3 with poor customer history.,not_recovered,0
+pay_SYN_0137,TEMPORARY_FAILURE,10000,CONTROLLED_RETRY,RETRY_LATER,0.85,First attempt failed with a temporary failure using netbanking; waiting before retrying is appropriate.,recovered,10000
+pay_SYN_0812,BANK_TIMEOUT,5000000,HUMAN_REVIEW,HUMAN_REVIEW,0.95,High-value transaction of 5000000 paise on attempt 3 after repeated BANK_TIMEOUT failures requires manual evaluation.,recovered,5000000
+pay_SYN_0077,CUSTOMER_ACTION_REQUIRED,50000,CUSTOMER_ACTION,CUSTOMER_ACTION,0.95,"Failure category is CUSTOMER_ACTION_REQUIRED, indicating customer action is needed before proceeding.",not_recovered,0
+pay_SYN_0637,CUSTOMER_ACTION_REQUIRED,10000,HUMAN_REVIEW,CUSTOMER_ACTION,0.95,"Failure category is CUSTOMER_ACTION_REQUIRED, indicating the issue requires customer intervention.",not_recovered,0
+pay_SYN_0974,TEMPORARY_FAILURE,5000000,HUMAN_REVIEW,HUMAN_REVIEW,0.95,High-value transaction of 5000000 paise with temporary failure requires manual review.,not_recovered,0
+pay_SYN_0939,BANK_TIMEOUT,25000,RETRY_LATER,RETRY_LATER,0.85,Bank timeout on netbanking attempt 2; waiting for bank system recovery is recommended.,not_recovered,0
+pay_SYN_0281,TEMPORARY_FAILURE,5000000,HUMAN_REVIEW,HUMAN_REVIEW,0.95,High transaction amount with poor customer history and multiple prior attempts requires manual review.,not_recovered,0
+pay_SYN_0884,BANK_TIMEOUT,1000000,HUMAN_REVIEW,RETRY_LATER,0.9,Bank timeout on netbanking attempt 2 with low recent failure rate and good customer history; waiting allows bank systems to recover.,recovered,1000000
+pay_SYN_0762,BANK_TIMEOUT,50000,HUMAN_REVIEW,CUSTOMER_ACTION,0.85,Bank timeout after 3 attempts combined with poor customer history requires customer intervention or alternative payment method.,not_recovered,0
+pay_SYN_0320,PERMANENT_FAILURE,100000,DO_NOT_RETRY,CUSTOMER_ACTION,0.95,"Payment failed with a PERMANENT_FAILURE on attempt 1, requiring customer intervention to update payment details.",not_recovered,0
+pay_SYN_0550,UNKNOWN,50000,HUMAN_REVIEW,RETRY_LATER,0.8,Initial card payment failed with an unknown failure category and a 0.35 recent failure rate.,recovered,50000
+pay_SYN_0175,TEMPORARY_FAILURE,250000,CONTROLLED_RETRY,CONTROLLED_RETRY,0.9,First attempt failed due to a temporary failure on a wallet transaction.,recovered,250000
+pay_SYN_0372,BANK_TIMEOUT,5000000,HUMAN_REVIEW,HUMAN_REVIEW,0.95,High-value transaction encountered a bank timeout on the first attempt and requires manual review.,recovered,5000000
+pay_SYN_0528,BANK_TIMEOUT,1000000,HUMAN_REVIEW,RETRY_LATER,0.85,Bank timeout on initial attempt alongside poor customer history and high recent failure rate suggests delaying retry.,not_recovered,0
+pay_SYN_0211,CUSTOMER_ACTION_REQUIRED,100000,HUMAN_REVIEW,CUSTOMER_ACTION,0.95,"Failure category is CUSTOMER_ACTION_REQUIRED, indicating that customer intervention is required to complete the transaction.",not_recovered,0
+pay_SYN_0236,UNKNOWN,500000,HUMAN_REVIEW,HUMAN_REVIEW,0.85,Failure category is UNKNOWN on attempt 2.,not_recovered,0
+pay_SYN_0102,UNKNOWN,10000,HUMAN_REVIEW,RETRY_LATER,0.85,High recent failure rate of 0.66 with an unknown failure category suggests transient gateway or system degradation.,not_recovered,0
+pay_SYN_0987,BANK_TIMEOUT,25000,RETRY_LATER,CONTROLLED_RETRY,0.9,Bank timeout on first attempt with good customer history indicates a transient issue suitable for a controlled retry.,recovered,25000
+pay_SYN_0903,TEMPORARY_FAILURE,100000,HUMAN_REVIEW,RETRY_LATER,0.85,Temporary failure on attempt 3 with a high recent failure rate of 0.71.,not_recovered,0
+pay_SYN_0948,CUSTOMER_ACTION_REQUIRED,500000,CUSTOMER_ACTION,CUSTOMER_ACTION,0.95,"Failure category is CUSTOMER_ACTION_REQUIRED, indicating customer intervention is needed to resolve the payment failure.",not_recovered,0
+pay_SYN_0140,CUSTOMER_ACTION_REQUIRED,5000000,HUMAN_REVIEW,CUSTOMER_ACTION,0.95,Failure category is CUSTOMER_ACTION_REQUIRED and customer history is poor.,recovered,5000000
+pay_SYN_0622,PERMANENT_FAILURE,5000000,HUMAN_REVIEW,CUSTOMER_ACTION,0.95,"The transaction failed with a PERMANENT_FAILURE status on the first attempt, requiring customer intervention to update payment details or resolve the issue.",not_recovered,0
+pay_SYN_0500,BANK_TIMEOUT,25000,HUMAN_REVIEW,RETRY_LATER,0.85,Bank timeout on attempt 3 with a high recent failure rate of 0.62.,recovered,25000
+pay_SYN_0371,TEMPORARY_FAILURE,500000,CONTROLLED_RETRY,CONTROLLED_RETRY,0.9,First attempt failed with a temporary failure and zero previous retries.,recovered,500000
+pay_SYN_0199,UNKNOWN,10000,HUMAN_REVIEW,RETRY_LATER,0.85,Attempt 3 failed with an unknown error category and a recent failure rate of 0.26.,not_recovered,0
+pay_SYN_0688,TEMPORARY_FAILURE,250000,CONTROLLED_RETRY,CONTROLLED_RETRY,0.9,Temporary failure on first attempt with good customer history.,recovered,250000
+pay_SYN_0585,PERMANENT_FAILURE,250000,HUMAN_REVIEW,CUSTOMER_ACTION,0.95,"Payment failed with PERMANENT_FAILURE on attempt 3, requiring customer intervention to update payment details.",not_recovered,0
+pay_SYN_0902,TEMPORARY_FAILURE,100000,CONTROLLED_RETRY,RETRY_LATER,0.85,Temporary failure on wallet payment attempt 2 with poor customer history.,not_recovered,0
+pay_SYN_0060,PERMANENT_FAILURE,1000000,HUMAN_REVIEW,DO_NOT_RETRY,0.95,Permanent failure category on wallet payment attempt with poor customer history.,not_recovered,0
+pay_SYN_0329,BANK_TIMEOUT,100000,RETRY_LATER,RETRY_LATER,0.85,Bank timeout on attempt 2 indicates a transient issuing bank issue. Retry later to allow bank systems to recover.,recovered,100000
+pay_SYN_0097,BANK_TIMEOUT,100000,HUMAN_REVIEW,RETRY_LATER,0.88,Bank timeout encountered on attempt 3; waiting allows time for temporary issuer bank instability to clear.,not_recovered,0
+pay_SYN_0313,PERMANENT_FAILURE,25000,DO_NOT_RETRY,CUSTOMER_ACTION,0.95,"Payment failed due to PERMANENT_FAILURE, requiring customer intervention or a different payment method.",not_recovered,0
+pay_SYN_0975,UNKNOWN,100000,HUMAN_REVIEW,RETRY_LATER,0.85,First attempt failed with UNKNOWN category alongside a high recent failure rate of 0.59.,not_recovered,0
+pay_SYN_0300,PERMANENT_FAILURE,500000,DO_NOT_RETRY,CUSTOMER_ACTION,0.95,"Payment failed with a PERMANENT_FAILURE category, requiring the customer to update or fix their payment details.",not_recovered,0
+pay_SYN_0925,UNKNOWN,50000,HUMAN_REVIEW,CUSTOMER_ACTION,0.85,Attempt number 3 failed with an UNKNOWN failure category and poor customer history.,not_recovered,0
+pay_SYN_0602,BANK_TIMEOUT,50000,HUMAN_REVIEW,RETRY_LATER,0.88,Netbanking transaction failed due to bank timeout on attempt 3; delaying retry allows bank gateway to recover.,not_recovered,0
+pay_SYN_0440,CUSTOMER_ACTION_REQUIRED,1000000,HUMAN_REVIEW,CUSTOMER_ACTION,0.95,Failure category is CUSTOMER_ACTION_REQUIRED for netbanking payment attempt.,recovered,1000000
+pay_SYN_0838,TEMPORARY_FAILURE,25000,HUMAN_REVIEW,RETRY_LATER,0.85,Temporary failure on netbanking attempt 3 with elevated recent failure rate of 0.55.,not_recovered,0
+pay_SYN_0571,TEMPORARY_FAILURE,250000,HUMAN_REVIEW,RETRY_LATER,0.85,High recent failure rate of 0.79 and temporary failure on attempt 3 indicate waiting for system stability before retrying.,not_recovered,0
+pay_SYN_0880,CUSTOMER_ACTION_REQUIRED,500000,CUSTOMER_ACTION,CUSTOMER_ACTION,0.95,Failure category is CUSTOMER_ACTION_REQUIRED for wallet payment attempt 2.,not_recovered,0
+pay_SYN_0262,TEMPORARY_FAILURE,100000,HUMAN_REVIEW,RETRY_LATER,0.85,Temporary failure observed on attempt 3 for netbanking transaction.,not_recovered,0
+pay_SYN_0579,BANK_TIMEOUT,500000,HUMAN_REVIEW,RETRY_LATER,0.85,Bank timeout on attempt 3 with poor customer history requires delaying the next attempt.,not_recovered,0
+pay_SYN_0024,BANK_TIMEOUT,25000,RETRY_LATER,RETRY_LATER,0.85,Netbanking attempt 2 failed due to bank timeout alongside an elevated recent failure rate of 0.47.,recovered,25000
+pay_SYN_0031,BANK_TIMEOUT,5000000,HUMAN_REVIEW,RETRY_LATER,0.85,Bank timeout on attempt 3 combined with a high recent failure rate of 0.78 indicates temporary downstream bank instability.,not_recovered,0
+pay_SYN_0011,TEMPORARY_FAILURE,100000,CONTROLLED_RETRY,RETRY_LATER,0.85,Temporary failure on first attempt with a high recent failure rate of 0.66.,not_recovered,0
+pay_SYN_0222,CUSTOMER_ACTION_REQUIRED,5000000,HUMAN_REVIEW,CUSTOMER_ACTION,0.95,Telemetry indicates CUSTOMER_ACTION_REQUIRED for the payment failure.,not_recovered,0
+pay_SYN_0821,CUSTOMER_ACTION_REQUIRED,5000000,HUMAN_REVIEW,CUSTOMER_ACTION,0.95,"Failure category is CUSTOMER_ACTION_REQUIRED, necessitating customer intervention.",not_recovered,0
+pay_SYN_0297,CUSTOMER_ACTION_REQUIRED,10000,HUMAN_REVIEW,CUSTOMER_ACTION,0.95,The failure category explicitly indicates that customer action is required for payment completion.,recovered,10000
+pay_SYN_0055,CUSTOMER_ACTION_REQUIRED,250000,CUSTOMER_ACTION,CUSTOMER_ACTION,0.95,"Failure category is CUSTOMER_ACTION_REQUIRED, requiring customer intervention to proceed.",not_recovered,0
+pay_SYN_0543,BANK_TIMEOUT,250000,RETRY_LATER,RETRY_LATER,0.9,Bank timeout on attempt 1 combined with a high recent failure rate of 0.68 indicates potential bank performance degradation.,recovered,250000
+pay_SYN_0210,PERMANENT_FAILURE,50000,DO_NOT_RETRY,CUSTOMER_ACTION,0.95,Payment failed with a permanent failure status on attempt 1.,not_recovered,0
+pay_SYN_0605,TEMPORARY_FAILURE,10000,HUMAN_REVIEW,CONTROLLED_RETRY,0.9,Temporary failure on wallet payment with good customer history on attempt 3.,recovered,10000
+pay_SYN_0693,CUSTOMER_ACTION_REQUIRED,25000,HUMAN_REVIEW,CUSTOMER_ACTION,0.95,Failure category is CUSTOMER_ACTION_REQUIRED on attempt 3.,not_recovered,0
+pay_SYN_0867,BANK_TIMEOUT,25000,RETRY_LATER,CONTROLLED_RETRY,0.85,Bank timeout on attempt 2 represents a transient issue with a low recent failure rate.,recovered,25000
+pay_SYN_0108,TEMPORARY_FAILURE,10000,HUMAN_REVIEW,CONTROLLED_RETRY,0.9,Temporary failure on attempt 3 with a relatively low recent failure rate of 0.23 supports a controlled retry.,recovered,10000
+pay_SYN_0494,CUSTOMER_ACTION_REQUIRED,10000,HUMAN_REVIEW,CUSTOMER_ACTION,0.95,Failure category explicitly indicates CUSTOMER_ACTION_REQUIRED.,recovered,10000
+pay_SYN_0591,PERMANENT_FAILURE,10000,DO_NOT_RETRY,CUSTOMER_ACTION,0.95,"Payment failed with PERMANENT_FAILURE on attempt 2, requiring customer intervention to update or switch payment method.",not_recovered,0
+pay_SYN_0742,TEMPORARY_FAILURE,25000,CONTROLLED_RETRY,CONTROLLED_RETRY,0.85,"Attempt 2 failed with a temporary failure, making a controlled retry appropriate.",recovered,25000
+pay_SYN_0293,BANK_TIMEOUT,250000,HUMAN_REVIEW,RETRY_LATER,0.85,Bank timeout on attempt 3 combined with poor customer history and high recent failure rate.,not_recovered,0
+pay_SYN_0290,UNKNOWN,5000000,HUMAN_REVIEW,HUMAN_REVIEW,0.9,Failure category is UNKNOWN for a high-value netbanking transaction.,not_recovered,0
+pay_SYN_0653,PERMANENT_FAILURE,250000,HUMAN_REVIEW,DO_NOT_RETRY,0.95,Permanent failure encountered on attempt 3 with poor customer history.,not_recovered,0
+pay_SYN_0040,TEMPORARY_FAILURE,25000,HUMAN_REVIEW,CONTROLLED_RETRY,0.9,Temporary failure on netbanking attempt 3 with good customer history and low recent failure rate.,recovered,25000
+pay_SYN_0308,UNKNOWN,1000000,HUMAN_REVIEW,HUMAN_REVIEW,0.9,"Failure category is UNKNOWN and recent failure rate is high at 0.7, requiring manual assessment.",not_recovered,0
+pay_SYN_0680,PERMANENT_FAILURE,5000000,HUMAN_REVIEW,CUSTOMER_ACTION,0.95,Permanent failure on attempt 3 indicates automated retries will fail and customer intervention is required.,not_recovered,0
+pay_SYN_0067,CUSTOMER_ACTION_REQUIRED,5000000,HUMAN_REVIEW,CUSTOMER_ACTION,0.95,"Failure category is CUSTOMER_ACTION_REQUIRED, indicating the customer must intervene to complete the payment.",recovered,5000000
+pay_SYN_0068,CUSTOMER_ACTION_REQUIRED,500000,HUMAN_REVIEW,CUSTOMER_ACTION,0.95,Failure category explicitly indicates customer action is required after 3 failed attempts.,not_recovered,0
+pay_SYN_0278,TEMPORARY_FAILURE,5000000,HUMAN_REVIEW,HUMAN_REVIEW,0.95,High-value transaction with unknown customer history and high recent failure rate requires human review.,recovered,5000000
+pay_SYN_0618,TEMPORARY_FAILURE,25000,CONTROLLED_RETRY,CONTROLLED_RETRY,0.9,First attempt failed due to a temporary failure with no previous retries.,not_recovered,0
+pay_SYN_0663,BANK_TIMEOUT,250000,HUMAN_REVIEW,RETRY_LATER,0.85,Bank timeout encountered on attempt 3 suggests waiting for bank systems to stabilize before retrying.,not_recovered,0
+pay_SYN_0071,TEMPORARY_FAILURE,100000,HUMAN_REVIEW,CONTROLLED_RETRY,0.9,Temporary failure on attempt 3 with good customer history and low recent failure rate.,recovered,100000
+pay_SYN_0544,PERMANENT_FAILURE,500000,DO_NOT_RETRY,CUSTOMER_ACTION,0.95,Permanent failure on initial card attempt requires customer intervention to fix payment details.,not_recovered,0
+pay_SYN_0590,UNKNOWN,500000,HUMAN_REVIEW,HUMAN_REVIEW,0.85,Failure category is UNKNOWN on attempt 1 with unknown customer history.,not_recovered,0
+pay_SYN_0276,TEMPORARY_FAILURE,100000,CONTROLLED_RETRY,CONTROLLED_RETRY,0.9,Temporary failure on attempt 2 with low recent failure rate and average customer history.,recovered,100000
+pay_SYN_0319,BANK_TIMEOUT,1000000,HUMAN_REVIEW,RETRY_LATER,0.85,Bank timeout on attempt 2 with an elevated recent failure rate indicates a transient bank issue.,recovered,1000000
+pay_SYN_0549,TEMPORARY_FAILURE,50000,CONTROLLED_RETRY,RETRY_LATER,0.85,Temporary failure on attempt 2 with a high recent system failure rate of 0.69 despite good customer history.,not_recovered,0
+pay_SYN_0999,TEMPORARY_FAILURE,250000,CONTROLLED_RETRY,CONTROLLED_RETRY,0.85,Initial attempt resulted in a temporary failure despite a high recent system failure rate.,recovered,250000
+pay_SYN_0715,BANK_TIMEOUT,500000,HUMAN_REVIEW,RETRY_LATER,0.85,Bank timeout encountered on attempt 3; retrying later allows the issuer bank system to recover.,not_recovered,0
+pay_SYN_0754,UNKNOWN,250000,HUMAN_REVIEW,CUSTOMER_ACTION,0.9,Attempt 3 failed with UNKNOWN category alongside poor customer history and high recent failure rate of 0.65.,not_recovered,0
+pay_SYN_0328,UNKNOWN,5000000,HUMAN_REVIEW,HUMAN_REVIEW,0.95,High transaction amount combined with poor customer history and unknown failure category requires human review.,not_recovered,0
+pay_SYN_0383,TEMPORARY_FAILURE,50000,CONTROLLED_RETRY,RETRY_LATER,0.85,Temporary failure on netbanking with high recent failure rate of 0.69 suggests waiting before next attempt.,not_recovered,0
+pay_SYN_0452,TEMPORARY_FAILURE,1000000,HUMAN_REVIEW,RETRY_LATER,0.85,Temporary failure on first netbanking attempt with poor customer history.,not_recovered,0
+pay_SYN_0523,TEMPORARY_FAILURE,25000,CONTROLLED_RETRY,HUMAN_REVIEW,0.0,Gemini failure - escalated to human review,not_recovered,0
+pay_SYN_0219,CUSTOMER_ACTION_REQUIRED,250000,CUSTOMER_ACTION,CUSTOMER_ACTION,0.95,Failure category indicates customer action is required for this card transaction.,recovered,250000
+pay_SYN_0788,CUSTOMER_ACTION_REQUIRED,500000,CUSTOMER_ACTION,CUSTOMER_ACTION,0.95,"Failure category is CUSTOMER_ACTION_REQUIRED, indicating user intervention is needed.",recovered,500000
+pay_SYN_0765,BANK_TIMEOUT,100000,RETRY_LATER,RETRY_LATER,0.85,First attempt failed due to BANK_TIMEOUT with a high recent failure rate of 0.76 and poor customer history.,recovered,100000
+pay_SYN_0089,TEMPORARY_FAILURE,5000000,HUMAN_REVIEW,HUMAN_REVIEW,0.95,High-value transaction of 5000000 paise with poor customer history on attempt number 3 requires human review for safety.,not_recovered,0
+pay_SYN_0064,BANK_TIMEOUT,10000,RETRY_LATER,RETRY_LATER,0.85,Transient bank timeout encountered on attempt 2 during netbanking payment.,not_recovered,0
+pay_SYN_0827,PERMANENT_FAILURE,1000000,HUMAN_REVIEW,CUSTOMER_ACTION,0.95,Permanent failure on netbanking payment with poor customer history requires customer intervention.,not_recovered,0
+pay_SYN_0717,TEMPORARY_FAILURE,1000000,HUMAN_REVIEW,CUSTOMER_ACTION,0.85,Wallet payment failed on attempt 3 with poor customer history.,not_recovered,0
+pay_SYN_0352,PERMANENT_FAILURE,5000000,HUMAN_REVIEW,DO_NOT_RETRY,0.95,Permanent failure category indicates retries will not succeed.,not_recovered,0
+pay_SYN_0937,UNKNOWN,500000,HUMAN_REVIEW,HUMAN_REVIEW,0.9,"Third attempt failed with an unknown failure category, requiring manual review for safety.",not_recovered,0
+pay_SYN_0257,BANK_TIMEOUT,250000,RETRY_LATER,RETRY_LATER,0.85,"First attempt failed due to BANK_TIMEOUT, indicating potential transient issues with the bank gateway.",recovered,250000
